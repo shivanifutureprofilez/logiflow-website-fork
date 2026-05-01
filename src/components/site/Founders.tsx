@@ -10,23 +10,24 @@ export const Founders = () => (
     <div className="mx-auto max-w-7xl px-6 lg:px-12">
       <div className="max-w-2xl">
         <span className="text-xs font-bold uppercase tracking-[0.25em] text-teal">Founders</span>
-        <h2 className="mt-4 text-4xl font-black tracking-tight text-navy sm:text-5xl">
-          Built by operators who've shipped at scale.
+        <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-navy sm:text-5xl">
+          Built by operators who've <span className="text-gradient-teal">shipped at scale</span>.
         </h2>
       </div>
 
       <div className="mt-14 grid gap-8 md:grid-cols-2">
         {founders.map((f) => (
-          <div key={f.name} className="flex gap-6 rounded-2xl bg-soft-gradient p-8">
-            <div className="grid h-20 w-20 shrink-0 place-items-center rounded-full bg-accent-gradient text-2xl font-black text-white shadow-glow">
+          <div key={f.name} className="group relative flex gap-6 overflow-hidden rounded-2xl border border-border/60 bg-white p-8 transition hover:-translate-y-1 hover:shadow-lift">
+            <div className="absolute inset-x-0 top-0 h-1 bg-accent-gradient opacity-0 transition group-hover:opacity-100" />
+            <div className="grid h-20 w-20 shrink-0 place-items-center rounded-full bg-accent-gradient text-2xl font-extrabold text-white shadow-glow">
               {f.name.split(" ").map(n => n[0]).join("")}
             </div>
             <div>
               <h3 className="text-xl font-bold text-navy">{f.name}</h3>
-              <p className="text-sm font-medium text-teal">{f.role}</p>
+              <p className="text-sm font-semibold uppercase tracking-wider text-teal">{f.role}</p>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{f.bio}</p>
               <a href="#" className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-navy hover:text-teal">
-                <Linkedin className="h-4 w-4" /> LinkedIn
+                <Linkedin className="h-4 w-4" /> Connect on LinkedIn
               </a>
             </div>
           </div>

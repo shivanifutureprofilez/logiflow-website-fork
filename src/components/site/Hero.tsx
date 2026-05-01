@@ -1,43 +1,45 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle, ShieldCheck } from "lucide-react";
-import heroBg from "@/assets/hero-network.jpg";
+import heroImg from "@/assets/hero-logistics.jpg";
 
 export const Hero = () => (
-  <section className="relative isolate overflow-hidden bg-hero-gradient text-white">
-    {/* Background network illustration — right side, low opacity, blurred edges */}
+  <section className="relative isolate overflow-hidden bg-[hsl(var(--navy-deep))] text-white">
+    {/* Full-bleed cinematic logistics image — subject anchored right */}
     <div className="pointer-events-none absolute inset-0">
       <img
-        src={heroBg}
-        alt=""
-        aria-hidden
-        className="absolute right-0 top-0 h-full w-full object-cover object-right opacity-40 mix-blend-screen md:w-[70%]"
+        src={heroImg}
+        alt="Cargo ship and delivery truck at golden-hour port — logistics network across India"
+        className="absolute inset-0 h-full w-full object-cover object-right"
+        fetchPriority="high"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(220_60%_8%)] via-[hsl(220_60%_8%)]/80 to-transparent" />
-      {/* glow orbs */}
-      <div className="absolute -left-32 top-20 h-96 w-96 rounded-full bg-teal/20 blur-3xl animate-pulse-glow" />
-      <div className="absolute right-10 bottom-10 h-72 w-72 rounded-full bg-teal-bright/20 blur-3xl animate-pulse-glow" style={{ animationDelay: '2s' }} />
+      {/* Left-to-right darkening for text legibility — keep right side photo visible */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(220_60%_5%)] via-[hsl(220_60%_7%)]/70 to-transparent md:via-[hsl(220_60%_7%)]/60" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220_60%_5%)]/90 via-transparent to-[hsl(220_60%_7%)]/30" />
+      {/* subtle teal glows */}
+      <div className="absolute -left-40 top-1/3 h-[28rem] w-[28rem] rounded-full bg-teal/15 blur-[120px] animate-pulse-glow" />
+      <div className="absolute right-10 bottom-0 h-72 w-72 rounded-full bg-teal-bright/10 blur-3xl animate-pulse-glow" style={{ animationDelay: '2s' }} />
     </div>
 
-    <div className="relative mx-auto flex min-h-[92vh] max-w-7xl flex-col justify-center px-6 pb-24 pt-40 lg:px-12">
-      <div className="max-w-3xl animate-fade-up">
-        <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/80 backdrop-blur">
+    <div className="relative mx-auto flex min-h-[100vh] max-w-7xl flex-col justify-center px-6 pb-24 pt-40 lg:px-12">
+      <div className="max-w-2xl animate-fade-up">
+        <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-white/85 backdrop-blur">
           <span className="h-1.5 w-1.5 rounded-full bg-teal-bright animate-pulse" />
           India's smart logistics network
         </span>
 
-        <h1 className="mt-6 text-5xl font-black leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl xl:text-[5.25rem]">
+        <h1 className="mt-7 max-w-[14ch] font-display text-[2.5rem] font-extrabold leading-[1.02] tracking-[-0.04em] sm:text-5xl lg:text-[4.5rem] xl:text-[5.25rem]">
           Smart Logistics.<br />
           <span className="text-gradient-teal">Seamless Deliveries</span><br />
-          Across India.
+          <span className="text-white/95">Across India.</span>
         </h1>
 
-        <p className="mt-7 max-w-xl text-lg font-light leading-relaxed text-white/75 sm:text-xl">
-          Logiflow connects businesses with multiple courier partners for reliable
-          and cost-effective deliveries across India.
+        <p className="mt-8 max-w-xl text-base font-light leading-relaxed text-white/70 sm:text-lg">
+          Logiflow connects ambitious businesses with 25+ courier partners — so every shipment
+          moves on the fastest, cheapest, most reliable route. Automatically.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-4">
-          <Button size="lg" className="h-14 rounded-xl bg-accent-gradient px-8 text-base font-semibold text-white shadow-glow hover:opacity-95">
+          <Button size="lg" className="h-14 rounded-xl bg-accent-gradient px-8 text-base font-semibold text-white shadow-glow transition hover:scale-[1.02] hover:opacity-95">
             Request Call Back <ArrowRight className="ml-1" />
           </Button>
           <Button size="lg" variant="outline" className="h-14 rounded-xl border-white/25 bg-white/5 px-8 text-base font-medium text-white backdrop-blur hover:bg-white/15 hover:text-white">
@@ -45,12 +47,17 @@ export const Hero = () => (
           </Button>
         </div>
 
-        <div className="mt-14 flex flex-wrap items-center gap-x-10 gap-y-4 text-sm text-white/60">
+        <div className="mt-16 flex flex-wrap items-center gap-x-10 gap-y-4 text-sm text-white/60">
           <div className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-teal-bright" /> 25+ courier partners</div>
+          <div className="hidden h-4 w-px bg-white/15 sm:block" />
           <div className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-teal-bright" /> 27,000+ pin codes</div>
+          <div className="hidden h-4 w-px bg-white/15 sm:block" />
           <div className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-teal-bright" /> 99.2% delivery success</div>
         </div>
       </div>
     </div>
+
+    {/* bottom fade into next section */}
+    <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background/0" />
   </section>
 );

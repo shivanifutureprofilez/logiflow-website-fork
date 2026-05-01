@@ -1,15 +1,10 @@
-import { Package } from "lucide-react";
+import logo from "@/assets/logiflow-logo.png";
 
 export const Footer = () => (
   <footer className="bg-navy-deep py-16 text-white/70">
     <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-4 lg:px-12">
       <div className="md:col-span-1">
-        <div className="flex items-center gap-2 text-white">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-accent-gradient">
-            <Package className="h-5 w-5" strokeWidth={2.5} />
-          </span>
-          <span className="text-xl font-bold">Logiflow</span>
-        </div>
+        <img src={logo} alt="Logiflow" className="h-10 w-auto" />
         <p className="mt-4 text-sm leading-relaxed text-white/60">
           India's smart logistics aggregator — connecting businesses with the best courier partners.
         </p>

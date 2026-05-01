@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -70,13 +70,14 @@
 
 @layer base {
   * { @apply border-border; }
-  html { font-family: 'Roboto', system-ui, sans-serif; }
+  html { font-family: 'Inter', system-ui, sans-serif; }
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Roboto', system-ui, sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
     font-weight: 400;
+    -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4 { font-family: 'Roboto', sans-serif; letter-spacing: -0.025em; }
+  h1, h2, h3, h4 { font-family: 'Sora', 'Inter', sans-serif; letter-spacing: -0.035em; font-weight: 800; }
 }
 
 @layer utilities {
