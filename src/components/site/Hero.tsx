@@ -27,7 +27,7 @@ export const Hero = () => (
           India's smart logistics network
         </span>
 
-        <h1 className="mt-7 font-display text-[2.75rem] font-extrabold leading-[1.02] tracking-[-0.04em] sm:text-6xl lg:text-[5.25rem] xl:text-[5.75rem]">
+        <h1 className="mt-7 max-w-[14ch] font-display text-[2.5rem] font-extrabold leading-[1.02] tracking-[-0.04em] sm:text-5xl lg:text-[4.5rem] xl:text-[5.25rem]">
           Smart Logistics.<br />
           <span className="text-gradient-teal">Seamless Deliveries</span><br />
           <span className="text-white/95">Across India.</span>
