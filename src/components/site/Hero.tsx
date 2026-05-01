@@ -12,9 +12,9 @@ export const Hero = () => (
         className="absolute inset-0 h-full w-full object-cover object-right"
         fetchPriority="high"
       />
-      {/* Left-to-right darkening for text legibility */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(220_60%_6%)] via-[hsl(220_60%_8%)]/85 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220_60%_6%)] via-transparent to-[hsl(220_60%_8%)]/40" />
+      {/* Left-to-right darkening for text legibility — keep right side photo visible */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(220_60%_5%)] via-[hsl(220_60%_7%)]/70 to-transparent md:via-[hsl(220_60%_7%)]/60" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220_60%_5%)]/90 via-transparent to-[hsl(220_60%_7%)]/30" />
       {/* subtle teal glows */}
       <div className="absolute -left-40 top-1/3 h-[28rem] w-[28rem] rounded-full bg-teal/15 blur-[120px] animate-pulse-glow" />
       <div className="absolute right-10 bottom-0 h-72 w-72 rounded-full bg-teal-bright/10 blur-3xl animate-pulse-glow" style={{ animationDelay: '2s' }} />

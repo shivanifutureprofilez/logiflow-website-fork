@@ -4,7 +4,7 @@ export const Footer = () => (
   <footer className="bg-navy-deep py-16 text-white/70">
     <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-4 lg:px-12">
       <div className="md:col-span-1">
-        <img src={logo} alt="Logiflow" className="h-9 w-auto brightness-0 invert" />
+        <img src={logo} alt="Logiflow" className="h-10 w-auto" />
         <p className="mt-4 text-sm leading-relaxed text-white/60">
           India's smart logistics aggregator — connecting businesses with the best courier partners.
         </p>
