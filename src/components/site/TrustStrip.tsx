@@ -1,19 +1,43 @@
-export const TrustStrip = () => {
-  const partners = ["BlueDart", "Delhivery", "DTDC", "Ekart", "Xpressbees", "Shadowfax", "Ecom Express"];
-  return (
-    <section className="border-y border-border bg-white py-12">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12">
-        <p className="text-center text-[11px] font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-          Powering deliveries with India's most trusted partners
+import libas from "@/assets/partners/libas.png";
+import mollyMoo from "@/assets/partners/molly-moo.png";
+import drPets from "@/assets/partners/dr-pets.jpeg";
+import outbloom from "@/assets/partners/outbloom.jpeg";
+import sFactor from "@/assets/partners/s-factor.png";
+import cbh from "@/assets/partners/cbh.jpeg";
+
+const partners = [
+  { src: libas, alt: "Libas" },
+  { src: mollyMoo, alt: "Molly Moo" },
+  { src: drPets, alt: "Dr. Pets" },
+  { src: outbloom, alt: "Outbloom Clinics" },
+  { src: sFactor, alt: "S Factor" },
+  { src: cbh, alt: "CBH Enterprises" },
+];
+
+export const TrustStrip = () => (
+  <section className="border-y border-border bg-white py-16">
+    <div className="mx-auto max-w-7xl px-6 lg:px-12">
+      <div className="text-center">
+        <span className="text-xs font-bold uppercase tracking-[0.25em] text-teal">Trusted partners</span>
+        <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
+          Trusted by Growing Businesses Across India
+        </h2>
+        <p className="mx-auto mt-3 max-w-2xl text-base text-muted-foreground">
+          Supporting sellers, manufacturers, and distributors with reliable and scalable logistics operations.
         </p>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-14 gap-y-6">
-          {partners.map((p) => (
-            <span key={p} className="text-lg font-bold tracking-tight text-foreground/35 transition hover:text-navy">
-              {p}
-            </span>
-          ))}
-        </div>
       </div>
-    </section>
-  );
-};
+      <div className="mt-12 grid grid-cols-2 items-center gap-x-10 gap-y-8 sm:grid-cols-3 lg:grid-cols-6">
+        {partners.map((p) => (
+          <div key={p.alt} className="flex h-20 items-center justify-center">
+            <img
+              src={p.src}
+              alt={`${p.alt} — Logiflow client`}
+              loading="lazy"
+              className="max-h-16 w-auto max-w-[140px] object-contain opacity-80 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);

@@ -1,28 +1,37 @@
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { Menu, Phone } from "lucide-react";
 import logo from "@/assets/logiflow-logo.png";
 
-const links = ["Services", "How it works", "Industries", "About", "Contact"];
+const links = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Industries", href: "#industries" },
+  { label: "How it works", href: "#how" },
+  { label: "Contact", href: "#contact" },
+];
 
 export const Navbar = () => (
-  <header className="absolute top-0 left-0 right-0 z-50">
-    <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-12">
-      <a href="#" className="flex items-center gap-2">
-        <img src={logo} alt="Logiflow" className="h-12 w-auto" />
+  <header className="sticky top-0 left-0 right-0 z-50 border-b border-border/60 bg-white/85 backdrop-blur-xl">
+    <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-12">
+      <a href="#home" className="flex items-center gap-2">
+        <img src={logo} alt="Logiflow Pvt. Ltd." className="h-16 w-auto md:h-20" />
       </a>
-      <div className="hidden items-center gap-9 lg:flex">
+      <div className="hidden items-center gap-8 lg:flex">
         {links.map((l) => (
-          <a key={l} href="#" className="text-sm font-medium text-white/75 transition hover:text-white">
-            {l}
+          <a key={l.label} href={l.href} className="text-[15px] font-medium text-foreground/75 transition hover:text-navy">
+            {l.label}
           </a>
         ))}
       </div>
       <div className="flex items-center gap-3">
-        <Button variant="ghost" className="hidden text-white hover:bg-white/10 hover:text-white md:inline-flex">
-          Sign in
+        <a href="tel:+916262762626" className="hidden items-center gap-2 text-sm font-semibold text-navy md:inline-flex">
+          <Phone className="h-4 w-4 text-teal" /> +91-62627-62626
+        </a>
+        <Button className="bg-accent-gradient font-semibold text-white shadow-glow hover:opacity-95">
+          Request a Call Back
         </Button>
-        <Button className="bg-white font-semibold text-navy hover:bg-white/90">Get Started</Button>
-        <button className="text-white lg:hidden" aria-label="Open menu"><Menu /></button>
+        <button className="text-navy lg:hidden" aria-label="Open menu"><Menu /></button>
       </div>
     </nav>
   </header>
