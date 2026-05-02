@@ -1,4 +1,5 @@
 import { Zap, IndianRupee, MapPin, Headphones, BarChart3, Lock } from "lucide-react";
+import trucks from "@/assets/trucks.jpg";
 
 const reasons = [
   { icon: Zap, title: "Fastest available route", desc: "Smart routing picks the quickest partner per pin code." },
@@ -10,12 +11,24 @@ const reasons = [
 ];
 
 export const WhyUs = () => (
-  <section className="bg-soft-gradient py-28">
-    <div className="mx-auto max-w-7xl px-6 lg:px-12">
+  <section className="relative isolate overflow-hidden bg-[hsl(var(--navy-deep))] py-28 text-white">
+    <img
+      src={trucks}
+      alt="Fleet of cargo trucks at an Indian logistics hub at dusk"
+      loading="lazy"
+      width={1600}
+      height={900}
+      className="absolute inset-0 h-full w-full object-cover opacity-25"
+    />
+    <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220_60%_6%)]/95 via-[hsl(218_60%_10%)]/90 to-[hsl(220_60%_6%)]/95" />
+    <div className="absolute -left-32 top-1/3 h-96 w-96 rounded-full bg-teal/15 blur-[120px]" />
+    <div className="absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-teal-bright/10 blur-[120px]" />
+
+    <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
       <div className="mx-auto max-w-2xl text-center">
-        <span className="text-xs font-bold uppercase tracking-[0.25em] text-teal">Why Logiflow</span>
-        <h2 className="mt-4 text-4xl font-black tracking-tight text-navy sm:text-5xl">
-          The advantages that move you forward.
+        <span className="text-xs font-bold uppercase tracking-[0.25em] text-teal-bright">Why Logiflow</span>
+        <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+          The advantages that <span className="text-gradient-teal">move you forward</span>.
         </h2>
       </div>
 
@@ -26,8 +39,8 @@ export const WhyUs = () => (
               <Icon className="h-5 w-5" strokeWidth={2.5} />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-navy">{title}</h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+              <h3 className="text-lg font-bold">{title}</h3>
+              <p className="mt-1.5 text-sm leading-relaxed text-white/65">{desc}</p>
             </div>
           </div>
         ))}
