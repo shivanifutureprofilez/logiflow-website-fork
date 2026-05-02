@@ -10,7 +10,7 @@ const services = [
 ];
 
 export const Services = () => (
-  <section className="bg-background py-28">
+  <section className="bg-white py-28">
     <div className="mx-auto max-w-7xl px-6 lg:px-12">
       <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
         <div className="max-w-2xl">
