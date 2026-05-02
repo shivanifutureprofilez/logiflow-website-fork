@@ -6,7 +6,7 @@ const steps = [
 ];
 
 export const HowItWorks = () => (
-  <section className="bg-background py-28">
+  <section className="bg-soft-gradient py-28">
     <div className="mx-auto max-w-7xl px-6 lg:px-12">
       <div className="max-w-2xl">
         <span className="text-xs font-bold uppercase tracking-[0.25em] text-teal">How it works</span>
