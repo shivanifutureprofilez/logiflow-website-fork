@@ -19,9 +19,9 @@ export const WhyUs = () => (
       loading="lazy"
       width={1600}
       height={900}
-      className="absolute inset-0 h-full w-full object-cover opacity-[0.08] blur-sm"
+      className="absolute inset-0 h-full w-full object-cover opacity-[0.05] blur-md"
     />
-    <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220_60%_6%)]/98 via-[hsl(218_60%_9%)]/97 to-[hsl(220_60%_6%)]/98" />
+    <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220_60%_7%)]/99 via-[hsl(218_60%_10%)]/98 to-[hsl(220_60%_7%)]/99" />
     <div className="absolute -left-32 top-1/3 h-96 w-96 rounded-full bg-teal/15 blur-[120px]" />
     <div className="absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-teal-bright/10 blur-[120px]" />
 
@@ -36,15 +36,15 @@ export const WhyUs = () => (
         </p>
       </div>
 
-      <div className="mt-20 grid gap-x-12 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-20 grid gap-x-8 gap-y-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-10 lg:gap-y-8">
         {reasons.map(({ icon: Icon, title, desc }) => (
-          <div key={title} className="flex gap-5 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-7 transition hover:border-teal/25 hover:bg-white/[0.04]">
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-teal/15 text-teal-bright">
-              <Icon className="h-5 w-5" strokeWidth={2.5} />
+          <div key={title} className="group flex gap-5 rounded-2xl border border-white/[0.05] bg-white/[0.015] p-6 transition duration-300 hover:-translate-y-0.5 hover:border-teal/30 hover:bg-white/[0.035]">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-teal/10 text-teal-bright ring-1 ring-teal/20 transition group-hover:bg-teal/20">
+              <Icon className="h-[18px] w-[18px]" strokeWidth={2} />
             </div>
             <div>
-              <h3 className="text-lg font-bold tracking-tight">{title}</h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-white/70">{desc}</p>
+              <h3 className="text-[17px] font-bold leading-snug tracking-tight">{title}</h3>
+              <p className="mt-1.5 text-[13.5px] leading-relaxed text-white/65">{desc}</p>
             </div>
           </div>
         ))}

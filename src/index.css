@@ -77,10 +77,11 @@
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4 { font-family: 'Sora', 'Inter', sans-serif; letter-spacing: -0.04em; font-weight: 800; line-height: 1.05; }
-  h1 { font-weight: 900; }
-  h2 { font-weight: 800; }
-  h3 { font-weight: 700; letter-spacing: -0.025em; line-height: 1.2; }
+  h1, h2, h3, h4 { font-family: 'Sora', 'Inter', sans-serif; letter-spacing: -0.035em; font-weight: 800; line-height: 1.0; }
+  h1 { font-weight: 900; line-height: 0.98; letter-spacing: -0.045em; }
+  h2 { font-weight: 800; line-height: 1.02; letter-spacing: -0.04em; }
+  h3 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; }
+  p { line-height: 1.55; }
 }
 
 @layer utilities {

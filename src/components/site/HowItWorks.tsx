@@ -18,37 +18,29 @@ export const HowItWorks = () => (
       </div>
 
       <div className="relative mt-20">
-        {/* Connecting dashed flow line */}
-        <svg
-          aria-hidden="true"
-          className="absolute left-0 right-0 top-10 hidden h-6 w-full lg:block"
-          preserveAspectRatio="none"
-          viewBox="0 0 1000 24"
-          fill="none"
-        >
-          <path
-            d="M 60 12 H 940"
-            stroke="hsl(var(--teal))"
-            strokeWidth="2"
-            strokeDasharray="2 8"
-            strokeLinecap="round"
-            opacity="0.45"
-          />
-          <path d="M 935 6 L 945 12 L 935 18" stroke="hsl(var(--teal))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-        </svg>
-        <div className="grid gap-10 lg:grid-cols-3">
+        <div className="grid gap-8 lg:grid-cols-3 lg:gap-6">
           {steps.map((s, i) => (
-            <div key={s.n} className="relative rounded-2xl border border-border/60 bg-white p-8 shadow-soft transition hover:-translate-y-1 hover:shadow-lift">
-              <div className="flex items-center gap-4">
-                <div className="relative grid h-14 w-14 place-items-center rounded-2xl bg-accent-gradient text-white shadow-glow">
-                  <span className="font-display text-base font-extrabold">{s.n}</span>
+            <div key={s.n} className="relative">
+              <div className="relative h-full rounded-2xl border border-border/60 bg-white p-8 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-teal/30 hover:shadow-lift">
+                <div className="flex items-center gap-4">
+                  <div className="relative grid h-14 w-14 place-items-center rounded-2xl bg-accent-gradient text-white shadow-glow">
+                    <span className="font-display text-base font-extrabold">{s.n}</span>
+                  </div>
+                  <div className="h-px flex-1 bg-gradient-to-r from-teal/40 to-transparent" />
                 </div>
-                {i < steps.length - 1 && (
-                  <div className="hidden flex-1 border-t-2 border-dashed border-teal/30 lg:block" />
-                )}
+                <h3 className="mt-6 text-xl font-bold leading-tight tracking-tight text-navy">{s.t}</h3>
+                <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">{s.d}</p>
               </div>
-              <h3 className="mt-6 text-xl font-bold leading-tight tracking-tight text-navy">{s.t}</h3>
-              <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">{s.d}</p>
+              {i < steps.length - 1 && (
+                <div
+                  aria-hidden="true"
+                  className="absolute right-0 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 translate-x-1/2 items-center justify-center rounded-full border border-teal/25 bg-white text-teal shadow-soft lg:flex"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </div>
+              )}
             </div>
           ))}
         </div>
