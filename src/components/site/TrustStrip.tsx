@@ -33,7 +33,7 @@ export const TrustStrip = () => (
               src={p.src}
               alt={`${p.alt} — Logiflow client`}
               loading="lazy"
-              className="max-h-16 w-auto max-w-[140px] object-contain opacity-80 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0"
+              className="max-h-16 w-auto max-w-[140px] object-contain transition duration-300 hover:scale-105"
             />
           </div>
         ))}
