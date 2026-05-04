@@ -19,9 +19,9 @@ export const WhyUs = () => (
       loading="lazy"
       width={1600}
       height={900}
-      className="absolute inset-0 h-full w-full object-cover opacity-20"
+      className="absolute inset-0 h-full w-full object-cover opacity-[0.08] blur-sm"
     />
-    <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220_60%_6%)]/95 via-[hsl(218_60%_10%)]/92 to-[hsl(220_60%_6%)]/95" />
+    <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220_60%_6%)]/98 via-[hsl(218_60%_9%)]/97 to-[hsl(220_60%_6%)]/98" />
     <div className="absolute -left-32 top-1/3 h-96 w-96 rounded-full bg-teal/15 blur-[120px]" />
     <div className="absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-teal-bright/10 blur-[120px]" />
 
@@ -36,10 +36,10 @@ export const WhyUs = () => (
         </p>
       </div>
 
-      <div className="mt-16 grid gap-x-10 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-20 grid gap-x-12 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
         {reasons.map(({ icon: Icon, title, desc }) => (
-          <div key={title} className="flex gap-5 rounded-2xl border border-white/5 bg-white/[0.03] p-6 backdrop-blur transition hover:border-teal/30 hover:bg-white/[0.06]">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent-gradient text-white shadow-glow">
+          <div key={title} className="flex gap-5 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-7 transition hover:border-teal/25 hover:bg-white/[0.04]">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-teal/15 text-teal-bright">
               <Icon className="h-5 w-5" strokeWidth={2.5} />
             </div>
             <div>

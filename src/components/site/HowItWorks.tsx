@@ -18,14 +18,36 @@ export const HowItWorks = () => (
       </div>
 
       <div className="relative mt-20">
-        <div className="absolute left-8 right-8 top-9 hidden h-px bg-gradient-to-r from-transparent via-teal/40 to-transparent lg:block" />
+        {/* Connecting dashed flow line */}
+        <svg
+          aria-hidden="true"
+          className="absolute left-0 right-0 top-10 hidden h-6 w-full lg:block"
+          preserveAspectRatio="none"
+          viewBox="0 0 1000 24"
+          fill="none"
+        >
+          <path
+            d="M 60 12 H 940"
+            stroke="hsl(var(--teal))"
+            strokeWidth="2"
+            strokeDasharray="2 8"
+            strokeLinecap="round"
+            opacity="0.45"
+          />
+          <path d="M 935 6 L 945 12 L 935 18" stroke="hsl(var(--teal))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        </svg>
         <div className="grid gap-10 lg:grid-cols-3">
-          {steps.map((s) => (
-            <div key={s.n} className="relative rounded-2xl border border-border/60 bg-soft-gradient p-8 shadow-soft transition hover:-translate-y-1 hover:shadow-lift">
-              <div className="relative grid h-16 w-16 place-items-center rounded-2xl bg-accent-gradient text-white shadow-glow">
-                <span className="font-display text-lg font-extrabold">{s.n}</span>
+          {steps.map((s, i) => (
+            <div key={s.n} className="relative rounded-2xl border border-border/60 bg-white p-8 shadow-soft transition hover:-translate-y-1 hover:shadow-lift">
+              <div className="flex items-center gap-4">
+                <div className="relative grid h-14 w-14 place-items-center rounded-2xl bg-accent-gradient text-white shadow-glow">
+                  <span className="font-display text-base font-extrabold">{s.n}</span>
+                </div>
+                {i < steps.length - 1 && (
+                  <div className="hidden flex-1 border-t-2 border-dashed border-teal/30 lg:block" />
+                )}
               </div>
-              <h3 className="mt-6 text-xl font-bold text-navy">{s.t}</h3>
+              <h3 className="mt-6 text-xl font-bold leading-tight tracking-tight text-navy">{s.t}</h3>
               <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">{s.d}</p>
             </div>
           ))}

@@ -12,10 +12,10 @@ const items = [
 export const Industries = () => (
   <section id="industries" className="bg-soft-gradient py-28">
     <div className="mx-auto max-w-7xl px-6 lg:px-12">
-      <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
-        <div>
+      <div className="grid items-stretch gap-12 lg:grid-cols-[1.1fr_1fr]">
+        <div className="flex flex-col justify-center">
           <span className="text-xs font-bold uppercase tracking-[0.25em] text-teal">Industries we serve</span>
-          <h2 className="mt-4 text-4xl font-black tracking-tight text-navy sm:text-5xl lg:text-[3.25rem]">
+          <h2 className="mt-4 text-4xl font-black leading-[1.05] tracking-tight text-navy sm:text-5xl lg:text-[3.25rem]">
             Industries <span className="text-gradient-teal">We Support</span>
           </h2>
           <p className="mt-5 max-w-md text-base text-muted-foreground">
@@ -25,8 +25,9 @@ export const Industries = () => (
         </div>
         <div className="relative">
           <div className="absolute -inset-4 rounded-3xl bg-accent-gradient/20 blur-2xl" />
-          <div className="relative overflow-hidden rounded-3xl shadow-lift">
-            <img src={rider} alt="Logiflow delivery rider on an Indian street at sunrise" loading="lazy" width={1280} height={960} className="h-72 w-full object-cover sm:h-80" />
+          <div className="relative h-full overflow-hidden rounded-3xl shadow-lift">
+            <img src={rider} alt="Logiflow delivery rider on an Indian street at sunrise" loading="lazy" width={1280} height={960} className="h-full min-h-[320px] w-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
           </div>
         </div>
       </div>

@@ -27,21 +27,22 @@ export const FinalCta = () => (
         </div>
         <p className="mt-6 text-sm text-white/60">Our team will contact you shortly to understand your requirements.</p>
       </div>
-      <form className="rounded-3xl border border-white/10 bg-white/[0.06] p-7 shadow-glow backdrop-blur-xl" onSubmit={(e) => e.preventDefault()}>
-        <h3 className="text-xl font-bold">Quick enquiry</h3>
-        <p className="mt-1 text-sm text-white/60">Two fields. We'll call you back.</p>
-        <div className="mt-6 space-y-4">
+      <form className="rounded-3xl border border-white/10 bg-white p-8 text-navy shadow-lift" onSubmit={(e) => e.preventDefault()}>
+        <h3 className="font-display text-2xl font-extrabold tracking-tight text-navy">Quick enquiry</h3>
+        <p className="mt-1 text-sm text-muted-foreground">Two fields. We'll call you back within hours.</p>
+        <div className="mt-7 space-y-5">
           <div>
-            <label className="text-xs font-semibold uppercase tracking-widest text-white/70" htmlFor="name">Name</label>
-            <input id="name" type="text" required maxLength={100} className="mt-2 h-12 w-full rounded-xl border border-white/15 bg-white/5 px-4 text-sm text-white placeholder:text-white/40 focus:border-teal-bright focus:outline-none" placeholder="Your name" />
+            <label className="text-[11px] font-bold uppercase tracking-[0.18em] text-navy/70" htmlFor="name">Name</label>
+            <input id="name" type="text" required maxLength={100} className="mt-2 h-12 w-full rounded-xl border border-border bg-secondary/40 px-4 text-sm text-navy placeholder:text-muted-foreground focus:border-teal focus:bg-white focus:outline-none focus:ring-4 focus:ring-teal/15" placeholder="Your name" />
           </div>
           <div>
-            <label className="text-xs font-semibold uppercase tracking-widest text-white/70" htmlFor="phone">Phone</label>
-            <input id="phone" type="tel" required maxLength={15} className="mt-2 h-12 w-full rounded-xl border border-white/15 bg-white/5 px-4 text-sm text-white placeholder:text-white/40 focus:border-teal-bright focus:outline-none" placeholder="+91 90000 00000" />
+            <label className="text-[11px] font-bold uppercase tracking-[0.18em] text-navy/70" htmlFor="phone">Phone</label>
+            <input id="phone" type="tel" required maxLength={15} className="mt-2 h-12 w-full rounded-xl border border-border bg-secondary/40 px-4 text-sm text-navy placeholder:text-muted-foreground focus:border-teal focus:bg-white focus:outline-none focus:ring-4 focus:ring-teal/15" placeholder="+91 90000 00000" />
           </div>
-          <Button type="submit" size="lg" className="mt-2 h-12 w-full rounded-xl bg-accent-gradient font-semibold text-white shadow-glow hover:opacity-95">
-            Request a Call Back <Phone className="ml-1 h-4 w-4" />
+          <Button type="submit" size="lg" className="group mt-2 h-14 w-full rounded-xl bg-accent-gradient text-base font-semibold text-white shadow-glow transition hover:scale-[1.01] hover:opacity-95">
+            Request a Call Back <Phone className="ml-1 h-4 w-4 transition group-hover:translate-x-0.5" />
           </Button>
+          <p className="text-center text-xs text-muted-foreground">We respect your privacy. No spam, ever.</p>
         </div>
       </form>
     </div>
