@@ -26,14 +26,14 @@ export const TrustStrip = () => (
           Supporting sellers, manufacturers, and distributors with reliable and scalable logistics operations.
         </p>
       </div>
-      <div className="mt-12 grid grid-cols-2 items-center gap-x-10 gap-y-8 sm:grid-cols-3 lg:grid-cols-6">
+      <div className="mt-14 grid grid-cols-2 items-center gap-x-8 gap-y-10 sm:grid-cols-3 lg:grid-cols-6">
         {partners.map((p) => (
-          <div key={p.alt} className="flex h-20 items-center justify-center">
+          <div key={p.alt} className="flex h-16 items-center justify-center px-2">
             <img
               src={p.src}
               alt={`${p.alt} — Logiflow client`}
               loading="lazy"
-              className="max-h-16 w-auto max-w-[140px] object-contain transition duration-300 hover:scale-105"
+              className="h-12 w-auto max-w-[130px] object-contain object-center transition duration-300 hover:scale-105"
             />
           </div>
         ))}
