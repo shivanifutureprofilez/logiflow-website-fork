@@ -1,5 +1,5 @@
 import { Layers } from "lucide-react";
-import parcels from "@/assets/parcels.jpg";
+import warehouseOps from "@/assets/warehouse-ops.jpg";
 
 export const WhatIs = () => (
   <section id="about" className="relative bg-white py-28">
@@ -7,8 +7,8 @@ export const WhatIs = () => (
       <div className="relative">
         <div className="absolute -left-6 -top-6 h-32 w-32 rounded-3xl bg-accent-gradient/20 blur-2xl" />
         <div className="relative overflow-hidden rounded-3xl shadow-lift">
-          <img src={parcels} alt="Neatly packed Logiflow parcels ready for dispatch" loading="lazy" width={1280} height={960} className="h-full w-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-tr from-navy/10 via-transparent to-transparent" />
+          <img src={warehouseOps} alt="Workers sorting parcels on conveyor at Logiflow warehouse" loading="lazy" width={1280} height={960} className="h-[520px] w-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-navy/30 via-transparent to-transparent" />
         </div>
         <div className="absolute -bottom-6 -right-6 hidden rounded-2xl bg-white p-5 shadow-lift md:block">
           <div className="text-3xl font-extrabold text-navy">Since 1959</div>

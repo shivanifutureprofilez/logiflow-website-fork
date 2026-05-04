@@ -1,12 +1,10 @@
-import { MapPin, Network, Package, Building2, ShoppingCart, CalendarClock } from "lucide-react";
+import { MapPin, Network, Package, Building2, ShoppingCart, CalendarClock, ArrowUpRight } from "lucide-react";
 
-const services = [
-  { icon: MapPin, title: "Pan India Coverage", desc: "We deliver shipments across India — from metros to remote locations." },
-  { icon: Network, title: "Multi-Courier Routing", desc: "Each shipment is assigned to the best courier based on speed, cost, and service availability." },
-  { icon: Package, title: "Flexible Parcel Handling", desc: "We handle shipments from 100 grams to 100+ kilograms safely and efficiently." },
-  { icon: Building2, title: "B2B | B2C | E-commerce", desc: "End-to-end logistics support tailored for every business model." },
-  { icon: ShoppingCart, title: "E-commerce Platform Deliveries", desc: "Specialised handling for Amazon, Flipkart, Meesho, Blinkit, Instamart and other warehouse hubs." },
-  { icon: CalendarClock, title: "Daily Dispatch Operations", desc: "Structured pickup and dispatch cycles for consistent, reliable shipment flow." },
+const small = [
+  { icon: Package, title: "Flexible Parcel Handling", desc: "From 100 grams to 100+ kilograms — handled safely." },
+  { icon: Building2, title: "B2B · B2C · E-commerce", desc: "End-to-end support for every business model." },
+  { icon: ShoppingCart, title: "Marketplace Deliveries", desc: "Amazon, Flipkart, Meesho, Blinkit & more." },
+  { icon: CalendarClock, title: "Daily Dispatch Cycles", desc: "Structured pickups for consistent flow." },
 ];
 
 export const Services = () => (
