@@ -14,10 +14,9 @@ const Index = () => (
   <main className="min-h-screen bg-background">
     <Navbar />
     <Hero />
-    <section className="py-14"><TrustStrip /></section>
+    <TrustStrip />
     <WhatIs />
     <Services />
-    <div className="py-6" />
     <WhyUs />
     <HowItWorks />
     <Industries />
