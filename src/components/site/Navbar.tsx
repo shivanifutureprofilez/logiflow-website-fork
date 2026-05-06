@@ -13,9 +13,9 @@ const links = [
 
 export const Navbar = () => (
   <header className="sticky top-0 left-0 right-0 z-50 border-b border-border/60 bg-white/85 backdrop-blur-xl">
-    <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-12">
+    <nav className="mx-auto flex container items-center justify-between px-6 py-3 lg:px-12">
       <a href="#home" className="flex items-center gap-2">
-        <img src={logo} alt="Logiflow Pvt. Ltd." className="h-16 w-auto md:h-20" />
+        <img src={logo} alt="Logiflow Pvt. Ltd." className="h-16 w-auto" />
       </a>
       <div className="hidden items-center gap-8 lg:flex">
         {links.map((l) => (
