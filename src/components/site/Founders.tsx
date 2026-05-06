@@ -1,5 +1,5 @@
 import { Linkedin } from "lucide-react";
-import founder1 from "@/assets/founder-1.jpg";
+import founder1 from "@/assets/founder.jpeg";
 import founder2 from "@/assets/founder-2.jpg";
 
 const founders = [
